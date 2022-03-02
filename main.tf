@@ -11,6 +11,7 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
+# adding the s3 bucket
 resource "aws_s3_bucket" "onebucket" {
    bucket = "testing-s3-ok-terraform"
    acl = "private"
