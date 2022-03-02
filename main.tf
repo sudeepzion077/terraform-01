@@ -11,7 +11,8 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
-# adding the s3 bucket
+
+# Adding the s3 bucket
 resource "aws_s3_bucket" "onebucket" {
    bucket = "testing-s3-ok-terraform"
    acl = "private"
@@ -23,4 +24,10 @@ resource "aws_s3_bucket" "onebucket" {
      Environment = "Test"
    }
  }
+
+resource "aws_iam_user" "my_iam_user"{
+   name = "my-iam-user-abc-ok"
+}
+
+
 
